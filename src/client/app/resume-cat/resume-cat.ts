@@ -1,4 +1,5 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
+import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 
 
 @Component({
@@ -6,10 +7,11 @@ import {Component} from 'angular2/core';
   templateUrl: 'app//resume-cat/resume-cat.html',
   styleUrls: ['app//resume-cat/resume-cat.css'],
   providers: [],
-  directives: [],
+  directives: [MD_LIST_DIRECTIVES],
   pipes: []
 })
 export class ResumeCat {
+  @Input() category: String;
 
   constructor() {}
 
