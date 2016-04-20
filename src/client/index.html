@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Liveres</title>
-  <base href="/">
+  <base href="/" >
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -18,6 +18,11 @@
     }
   </script>
   -->
+  <style>
+  body {
+    margin:0px;
+  }
+  </style>
 </head>
 <body>
 <liveres-app>Loading...</liveres-app>
@@ -31,6 +36,7 @@
 <script src="vendor/angular2/bundles/angular2.dev.js"></script>
 <script src="vendor/angular2/bundles/http.dev.js"></script>
 <script src="vendor/angular2/bundles/router.dev.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script>
   System.config({
