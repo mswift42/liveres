@@ -1,20 +1,23 @@
 <md-sidenav-layout>
-  <md-sidenav opened="true" #sidenav mode="side" class="liveres-sidenav">
-    <md-list-item>
-      <span>Sidenav stuff</span>
-    </md-list-item>
-      <div *ngFor="#cat of categories">
-          <resume-cat [category]="cat"></resume-cat>
-      </div>
-  </md-sidenav>
-<md-toolbar color="primary">
- <button class="liveres-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
-  <span>Resume</span>
-</md-toolbar>
+    <md-sidenav opened="true" #sidenav mode="side" class="liveres-sidenav">
+        <div class="categoriesheader">
+            <md-list-item>
+                <span>Sidenav stuff</span>
+            </md-list-item>
+            </div>
+        <div class="categorylist">
+            <div *ngFor="#cat of categories">
+                <resume-cat [category]="cat"></resume-cat>
+            </div>
+        </div>
+    </md-sidenav>
+    <md-toolbar color="primary">
+        <button class="liveres-icon-button" (click)="sidenav.toggle()">
+            <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
+        <span>Resume</span>
+    </md-toolbar>
     <div class="app-content">
-        <span>Some Stuff</span>
     </div>
 </md-sidenav-layout>
 
