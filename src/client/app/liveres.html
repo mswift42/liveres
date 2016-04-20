@@ -1,5 +1,15 @@
-<p>
-  liveres Works!
-</p>
+<md-sidenav-layout>
+  <md-sidenav opened="true" #sidenav mode="side" class="liveres-sidenav">
+    <md-list-item>
+      <span>Sidenav stuff</span>
+    </md-list-item>
+  </md-sidenav>
+<md-toolbar color="primary">
+ <button class="liveres-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+  <span>Resume</span>
+</md-toolbar>
+</md-sidenav-layout>
 
 <router-outlet></router-outlet>
