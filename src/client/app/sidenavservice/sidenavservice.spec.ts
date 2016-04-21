@@ -10,15 +10,15 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {Sidenavservice} from './sidenavservice';
+import {SidenavService} from './sidenavservice';
 
 
 describe('Sidenavservice Service', () => {
 
-  beforeEachProviders(() => [Sidenavservice]);
+  beforeEachProviders(() => [SidenavService]);
 
 
-  it('should ...', inject([Sidenavservice], (service: Sidenavservice) => {
+  it('should ...', inject([SidenavService], (service: SidenavService) => {
 
   }));
 
