@@ -1,6 +1,8 @@
 .liveres-sidenav {
   padding:10px;
   min-width: 200px;
+  min-height: 100%;
+  background-color: #eaeaea;
 }
 
 .liveres-icon-button {
@@ -18,4 +20,10 @@
   padding: 0;
   text-align: left;
   text-decoration: none;
+}
+.app-content {
+  min-height:700px;
+}
+.categorylist {
+  margin-top:20px;
 }

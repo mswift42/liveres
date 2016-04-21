@@ -5,10 +5,11 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MdButton} from '@angular2-material/button';
 import {ResumeCat} from './resume-cat/resume-cat';
+import {SidenavCategory, SidenavService} from './sidenavservice/sidenavservice';
 
 @Component({
   selector: 'liveres-app',
-  providers: [ROUTER_PROVIDERS],
+  providers: [ROUTER_PROVIDERS, SidenavService],
   templateUrl: 'app/liveres.html',
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
                  MD_LIST_DIRECTIVES, MdButton, ResumeCat],
@@ -19,8 +20,10 @@ import {ResumeCat} from './resume-cat/resume-cat';
 ])
 export class LiveresApp {
   defaultMeaning: number = 42;
-  categories: String[] = ["profile", "projects", "employment", "education", "awards"];
-
+  cats: SidenavCategory[];
+  constructor(sidenavservice: SidenavService) {
+    this.cats = sidenavservice.getCategories();
+  }
   meaningOfLife(meaning?: number) {
     return `The meaning of life is ${meaning || this.defaultMeaning}`;
   }
