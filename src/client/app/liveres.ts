@@ -19,12 +19,8 @@ import {SidenavCategory, SidenavService} from './sidenavservice/sidenavservice';
 @RouteConfig([
 ])
 export class LiveresApp {
-  defaultMeaning: number = 42;
   cats: SidenavCategory[];
   constructor(sidenavservice: SidenavService) {
     this.cats = sidenavservice.getCategories();
-  }
-  meaningOfLife(meaning?: number) {
-    return `The meaning of life is ${meaning || this.defaultMeaning}`;
   }
 }
