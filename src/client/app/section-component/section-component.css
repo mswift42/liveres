@@ -1,0 +1,9 @@
+.ressection {
+    padding:8px;
+}
+
+@media (max-width:600px) {
+    .ressection {
+        padding:1px;
+    }
+}
