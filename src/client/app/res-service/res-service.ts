@@ -25,7 +25,8 @@ class Eductaion {
 }
 
 class Skill {
-  constructor(private title: String, private details: String[]) { }
+  constructor(private title: String, 
+  private level: String, private details: String[]) { }
 }
 
 class Language {
@@ -73,6 +74,19 @@ export class ResService {
        new Eductaion("2011 - 2014", "University of Oklahoma",
        "Bachelor, Information Technology", "" )
      ];
+     res.skills = [
+       new Skill("Web Development", "Master", 
+       ["HTML", "CSS", "Javascript"]),
+       new Skill("Compression", "Master", ["Mpeg", "MP4", "GIF"])
+     ];
+     res.languages = [
+       new Language("English", "native speaker")
+     ];
+     res.awards = [
+       new Award("Digital Compression Pioneer Award - Techcrunch",
+       "01 November 2014", "There is no spoon")
+     ];
+     return res;
   }
 
 }
