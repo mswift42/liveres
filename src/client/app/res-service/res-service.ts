@@ -40,6 +40,12 @@ class Award {
 class Resume {
   private about: String;
   private contact: ContactSection;
+  private projects: Project[];
+  private employment: Employment[];
+  private Eductaion: Eductaion[];
+  private skills: Skill[];
+  private languages: Language[];
+  private awards: Award[];
 }
 
 
