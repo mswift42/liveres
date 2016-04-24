@@ -38,20 +38,27 @@ class Award {
 }
 
 class Resume {
-  private about: String;
-  private contact: ContactSection;
-  private projects: Project[];
-  private employment: Employment[];
-  private Eductaion: Eductaion[];
-  private skills: Skill[];
-  private languages: Language[];
-  private awards: Award[];
+  public about: String;
+  public contact: ContactSection;
+  public projects: Project[];
+  public employment: Employment[];
+  public Eductaion: Eductaion[];
+  public skills: Skill[];
+  public languages: Language[];
+  public awards: Award[];
 }
 
 
 @Injectable()
 export class ResService {
+  private resume: Resume;
 
   constructor() { }
+  
+  public getSampleResume(): Resume {
+    let res = new Resume();
+    res.about = " Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation! "
+    
+  }
 
 }
