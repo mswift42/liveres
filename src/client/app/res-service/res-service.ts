@@ -5,9 +5,23 @@ class ContactSection {
   private website: String) {}
 }
 
+class Profile{
+  constructor(private company: String, private url: String) {}
+}
+
+class Project {
+  constructor(private title: String, private description: String,
+  private screenshot: String)  {}
+}
+
+class Employment {
+  constructor(private period: String, private company: String,
+  private position: String, private description: String) {}
+}
+
 class Resume {
   private about: String;
-  private contact: 
+  private contact: ContactSection;
 }
 
 
