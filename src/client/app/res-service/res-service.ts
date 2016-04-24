@@ -25,7 +25,16 @@ class Eductaion {
 }
 
 class Skill {
-  constructor (private title: String, private details: String[]) {}
+  constructor(private title: String, private details: String[]) { }
+}
+
+class Language {
+  constructor(private lang: String, private detail: String) { }
+}
+
+class Award {
+  constructor(private title: String, private awarded: String,
+    private description: String) { }
 }
 
 class Resume {
