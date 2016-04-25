@@ -1,41 +1,41 @@
 import {Injectable} from 'angular2/core';
 
 class ContactSection {
-  constructor(private email: String, private phone: String,
-    private website: String) { }
+  constructor(public email: String, public phone: String,
+    public website: String) { }
 }
 
 class Profile {
-  constructor(private company: String, private url: String) { }
+  constructor(public company: String, public url: String) { }
 }
 
 class Project {
-  constructor(private title: String, private description: String,
-    private screenshot: String) { }
+  constructor(public title: String, public description: String,
+    public screenshot: String) { }
 }
 
 class Employment {
-  constructor(private period: String, private company: String,
-    private position: String, private description: String) { }
+  constructor(public period: String, public company: String,
+    public position: String, public description: String) { }
 }
 
 class Eductaion {
-  constructor(private period: String, private institution: String,
-    private degree: String, private details: String) { }
+  constructor(public period: String, public institution: String,
+    public degree: String, public details: String) { }
 }
 
 class Skill {
-  constructor(private title: String, 
-  private level: String, private details: String[]) { }
+  constructor(public title: String, 
+  public level: String, public details: String[]) { }
 }
 
 class Language {
-  constructor(private lang: String, private detail: String) { }
+  constructor(public lang: String, public detail: String) { }
 }
 
 class Award {
-  constructor(private title: String, private awarded: String,
-    private description: String) { }
+  constructor(public title: String, public awarded: String,
+    public description: String) { }
 }
 
 export class Resume {
