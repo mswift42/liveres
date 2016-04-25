@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 .app-content {
-  min-height:700px;
+  margin-top:4vh;
 }
 .categorylist {
   margin-top:20px;
