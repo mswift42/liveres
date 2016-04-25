@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
 
-class ContactSection {
+export class Contact{
   constructor(public email: String, public phone: String,
     public website: String) { }
 }
@@ -40,7 +40,7 @@ class Award {
 
 export class Resume {
   public about: String;
-  public contact: ContactSection;
+  public contact: Contact;
   public projects: Project[];
   public employment: Employment[];
   public education: Eductaion[];
@@ -59,7 +59,7 @@ export class ResService {
   public getSampleResume(): Resume {
     let res = new Resume();
     res.about = " Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation! ";
-    res.contact = new ContactSection("richard.hendriks@mail.com",
+    res.contact = new Contact("richard.hendriks@mail.com",
      "(912) 555-4321", "http://richardhendriks.com");
      res.projects = [
        new Project("todoapp1", "sophisticated todo app.",
