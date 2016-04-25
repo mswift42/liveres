@@ -38,7 +38,7 @@ class Award {
     private description: String) { }
 }
 
-class Resume {
+export class Resume {
   public about: String;
   public contact: ContactSection;
   public projects: Project[];
