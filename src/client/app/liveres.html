@@ -19,6 +19,10 @@
         <span>Resume</span>
     </md-toolbar>
     <div class="app-content">
+        <contact-component [phone]="contact.phone"
+        [email]="contact.email" [url]="contact.url">
+        <p>Here should be the contact component</p>
+        </contact-component>
     </div>
 </md-sidenav-layout>
 
