@@ -6,7 +6,7 @@ import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MdButton} from '@angular2-material/button';
 import {ResumeCat} from './resume-cat/resume-cat';
 import {SidenavCategory, SidenavService} from './sidenavservice/sidenavservice';
-import {Resume, ResService} from './res-service/res-service';
+import {Resume, ResService, Contact} from './res-service/res-service';
 import {ContactComponent} from './contact-component/contact-component';
 
 @Component({
@@ -14,7 +14,7 @@ import {ContactComponent} from './contact-component/contact-component';
   providers: [ROUTER_PROVIDERS, SidenavService, ResService],
   templateUrl: 'app/liveres.html',
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
-                 MD_LIST_DIRECTIVES, MdButton, ResumeCat],
+                 MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent],
                  styleUrls: ['app/liveres.css'],
   pipes: []
 })
@@ -23,8 +23,9 @@ import {ContactComponent} from './contact-component/contact-component';
 export class LiveresApp {
   cats: SidenavCategory[];
   sampleres: Resume;
-  constructor(sidenavservice: SidenavService, resservice: ResService) {
+  contact: Contact;
+  constructor(sidenavservice: SidenavService,resservice: ResService) {
     this.cats = sidenavservice.getCategories();
-    this.sampleres = resservice.getSampleResume();
+    this.contact = resservice.getSampleResume().contact;
   }
 }
