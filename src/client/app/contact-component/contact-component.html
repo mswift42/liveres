@@ -1,3 +1,19 @@
-<p>
-  contact-component Works!
-</p>
+<md-card-title>Contact</md-card-title>
+  <md-card-content>
+    <div class="phonesection">
+      <i class="material-icons">phone</i>
+      <p class="phonenumber">
+        {{phone}}
+      </p>
+    </div>
+    <div class="emailsection">
+      <i class="material-icons">email</i>
+      <p class="emailaddress">
+        {{email}}
+      </p>
+    </div>
+    <div *ngIf="url" class="websection">
+      <i class="material-icons">http</i>
+      <a href="{{url}}">{{url}}</a>
+    </div>
+  </md-card-content>
