@@ -8,13 +8,15 @@ import {ResumeCat} from './resume-cat/resume-cat';
 import {SidenavCategory, SidenavService} from './sidenavservice/sidenavservice';
 import {Resume, ResService, Contact} from './res-service/res-service';
 import {ContactComponent} from './contact-component/contact-component';
+import {AboutMe} from './about-me-component/about-me-component';
 
 @Component({
   selector: 'liveres-app',
   providers: [ROUTER_PROVIDERS, SidenavService, ResService],
   templateUrl: 'app/liveres.html',
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
-                 MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent],
+                 MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent,
+                 AboutMe],
                  styleUrls: ['app/liveres.css'],
   pipes: []
 })
