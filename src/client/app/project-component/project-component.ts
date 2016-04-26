@@ -1,4 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
+import {SectionComponent} from '../section-component/section-component';
+import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 
 
 @Component({
@@ -6,10 +8,13 @@ import {Component} from 'angular2/core';
   templateUrl: 'app//project-component/project-component.html',
   styleUrls: ['app//project-component/project-component.css'],
   providers: [],
-  directives: [],
+  directives: [SectionComponent, MD_CARD_DIRECTIVES],
   pipes: []
 })
 export class ProjectComponent {
+  @Input() title: String;
+  @Input() description: String;
+  @Input() screenshot: String;
 
   constructor() {}
 
