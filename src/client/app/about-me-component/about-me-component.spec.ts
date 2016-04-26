@@ -10,7 +10,7 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {AboutMe} from './about-me';
+import {AboutMe} from './about-me-component';
 
 describe('AboutMe Component', () => {
 
