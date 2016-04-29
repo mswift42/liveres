@@ -14,26 +14,26 @@ export class Project {
     public screenshot: String) { }
 }
 
-class Employment {
+export class Employment {
   constructor(public period: String, public company: String,
     public position: String, public description: String) { }
 }
 
-class Eductaion {
+export class Eductaion {
   constructor(public period: String, public institution: String,
     public degree: String, public details: String) { }
 }
 
-class Skill {
+export class Skill {
   constructor(public title: String, 
   public level: String, public details: String[]) { }
 }
 
-class Language {
+export class Language {
   constructor(public lang: String, public detail: String) { }
 }
 
-class Award {
+export class Award {
   constructor(public title: String, public awarded: String,
     public description: String) { }
 }
