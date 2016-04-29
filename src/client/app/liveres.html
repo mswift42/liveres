@@ -6,7 +6,7 @@
             </md-list-item>
             </div>
         <div class="categorylist">
-            <div *ngFor="#cat of cats">
+            <div *ngFor="let cat of cats">
                 <resume-cat [category]="cat.category"
                 [icon]="cat.icon"></resume-cat>
             </div>
@@ -26,6 +26,7 @@
         <about-me></about-me>
         <projects-component></projects-component>
         <educations-component></educations-component>
+        <employment-list></employment-list>
     </div>
 </md-sidenav-layout>
 

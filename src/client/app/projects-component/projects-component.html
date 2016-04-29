@@ -1,5 +1,5 @@
 <section-component>
   <md-card-title>Projects</md-card-title>
-  <project-component *ngFor="#proj of projects" [title]="proj.title"
+  <project-component *ngFor="let proj of projects" [title]="proj.title"
   [description]="proj.description" [screenshot]="proj.screenshot"></project-component>
 </section-component>

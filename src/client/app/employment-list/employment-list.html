@@ -1,0 +1,6 @@
+<section-component>
+  <md-card-title>Employment</md-card-title>
+  <employment-component *ngFor="let emp of employmentlist"
+  [period]="emp.period" [company]="emp.company" 
+  [position]="emp.position" [details]="emp.details"></employment-component>
+</section-component>
