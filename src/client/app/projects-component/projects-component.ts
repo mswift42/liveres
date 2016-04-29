@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {SectionComponent} from '../section-component/section-component';
 import {ResService, Resume, Project} from '../res-service/res-service';
 import {ProjectComponent} from '../project-component/project-component';
+import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 
 
 @Component({
@@ -9,7 +10,8 @@ import {ProjectComponent} from '../project-component/project-component';
   templateUrl: 'app//projects-component/projects-component.html',
   styleUrls: ['app//projects-component/projects-component.css'],
   providers: [],
-  directives: [SectionComponent, ProjectComponent],
+  directives: [SectionComponent, ProjectComponent,
+    MD_CARD_DIRECTIVES],
   pipes: []
 })
 export class ProjectsComponent {
