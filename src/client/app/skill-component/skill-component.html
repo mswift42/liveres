@@ -1,3 +1,11 @@
-<p>
-  skill-component Works!
-</p>
+<div class="skillheader">
+  <md-card-content>{{title}}</md-card-content>
+</div>
+<div class="skilllevel">
+  <md-card-content>{{level}}</md-card-con>
+</div>
+<div class="skilldetails">
+  <div *ngFor="let det of details" class="skilllevel">
+    <md-card-content>{{det}}</md-card-content>
+  </div>
+</div>
