@@ -1,3 +1,6 @@
-<p>
-  educations-component Works!
-</p>
+<section-component>
+  <md-card-title>Education</md-card-title>
+  <education-component *ngFor="#edu of educations"
+  [period]="edu.period" [institution]="edu.institution"
+  [degree]="edu.degree" [details]="edu.details"></education-component>
+</section-component>
