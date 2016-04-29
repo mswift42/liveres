@@ -1,0 +1,5 @@
+<section-component>
+  <md-card-title>Languages</md-card-title>
+  <language-component *ngFor="let lang of languages"
+  [lang]="lang.lang" [level]="lang.level"></language-component>
+</section-component>
