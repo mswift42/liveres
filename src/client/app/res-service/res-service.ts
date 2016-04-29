@@ -9,7 +9,7 @@ class Profile {
   constructor(public company: String, public url: String) { }
 }
 
-class Project {
+export class Project {
   constructor(public title: String, public description: String,
     public screenshot: String) { }
 }
