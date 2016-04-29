@@ -12,6 +12,7 @@ import {AboutMe} from './about-me-component/about-me-component';
 import {ProjectsComponent} from './projects-component/projects-component';
 import {EducationsComponent} from './educations-component/educations-component';
 import {EmploymentList} from './employment-list/employment-list';
+import {SkillsList} from './skills-list/skills-list';
 
 @Component({
   selector: 'liveres-app',
@@ -20,7 +21,7 @@ import {EmploymentList} from './employment-list/employment-list';
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
                  MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent,
                  AboutMe, ProjectsComponent, EducationsComponent,
-                 EmploymentList],
+                 EmploymentList, SkillsList],
                  styleUrls: ['app/liveres.css'],
   pipes: []
 })
