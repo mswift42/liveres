@@ -19,7 +19,7 @@ export class Employment {
     public position: String, public description: String) { }
 }
 
-export class Eductaion {
+export class Education {
   constructor(public period: String, public institution: String,
     public degree: String, public details: String) { }
 }
@@ -43,7 +43,7 @@ export class Resume {
   public contact: Contact;
   public projects: Project[];
   public employment: Employment[];
-  public education: Eductaion[];
+  public education: Education[];
   public skills: Skill[];
   public languages: Language[];
   public awards: Award[];
