@@ -14,6 +14,7 @@ import {EducationsComponent} from './educations-component/educations-component';
 import {EmploymentList} from './employment-list/employment-list';
 import {SkillsList} from './skills-list/skills-list';
 import {LanguageList} from './language-list/language-list';
+import {AwardList} from './award-list/award-list';
 
 @Component({
   selector: 'liveres-app',
@@ -22,7 +23,8 @@ import {LanguageList} from './language-list/language-list';
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
                  MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent,
                  AboutMe, ProjectsComponent, EducationsComponent,
-                 EmploymentList, SkillsList, LanguageList],
+                 EmploymentList, SkillsList, LanguageList,
+                 AwardList],
                  styleUrls: ['app/liveres.css'],
   pipes: []
 })
