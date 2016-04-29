@@ -30,7 +30,7 @@ export class Skill {
 }
 
 export class Language {
-  constructor(public lang: String, public detail: String) { }
+  constructor(public lang: String, public level: String) { }
 }
 
 export class Award {
@@ -72,7 +72,9 @@ export class ResService {
      ];
      res.education = [
        new Education("2011 - 2014", "University of Oklahoma",
-       "Bachelor, Information Technology", "" )
+       "Bachelor, Information Technology", "" ),
+       new Education("2008 - 2011", "Example College", "great degree",
+       "studied really hard")
      ];
      res.skills = [
        new Skill("Web Development", "Master", 
@@ -80,7 +82,8 @@ export class ResService {
        new Skill("Compression", "Master", ["Mpeg", "MP4", "GIF"])
      ];
      res.languages = [
-       new Language("English", "native speaker")
+       new Language("English", "native speaker"),
+       new Language("French", "barely")
      ];
      res.awards = [
        new Award("Digital Compression Pioneer Award - Techcrunch",
