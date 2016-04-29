@@ -1,0 +1,6 @@
+<section-component>
+  <md-card-title>Awards</md-card-title>
+  <award-component *ngFor="let award of awards"
+  [title]="award.title" [awarded]="award.awarded"
+  [description]="award.description"></award-component>
+</section-component>
