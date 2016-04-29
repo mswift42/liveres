@@ -1,0 +1,6 @@
+<section-component>
+  <md-card-title>Skills</md-card-title>
+  <skill-component *ngFor="let skill of skilllist"
+  [title]="skill.title" [level]="skill.level"
+  [details]="skill.details"></skill-component>
+</section-component>
