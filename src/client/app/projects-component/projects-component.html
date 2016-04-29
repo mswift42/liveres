@@ -1,3 +1,5 @@
-<p>
-  projects-component Works!
-</p>
+<section-component>
+  <h2>Projects</h2>
+  <project-component *ngFor="#proj of projects" [title]="proj.title"
+  [description]="proj.description" [screenshot]="proj.screenshot"></project-component>
+</section-component>
