@@ -10,15 +10,15 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {CarouselComponent} from './carousel-component';
+import {SliderComponent} from './slider-component';
 
-describe('CarouselComponent Component', () => {
+describe('SliderComponent Component', () => {
 
   beforeEachProviders((): any[] => []);
 
 
   it('should ...', injectAsync([TestComponentBuilder], (tcb:TestComponentBuilder) => {
-    return tcb.createAsync(CarouselComponent).then((fixture) => {
+    return tcb.createAsync(SliderComponent).then((fixture) => {
       fixture.detectChanges();
     });
   }));
