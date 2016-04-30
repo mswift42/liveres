@@ -12,6 +12,7 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 })
 export class ImageComponent {
   url: String;
+  alttext: String;
 
   constructor() {}
 
