@@ -1,3 +1,11 @@
-<p>
-  carousel-component Works!
-</p>
+<div class="slidercontainer">
+    <div *ngFor="lev img of images; let i = index" class="slider">
+        <div *ngIf="isActiveIndex(i)">
+            <image-component [url]="img.url" 
+            [alttext]="img.alttext">
+            </image-component>
+            <caption-component [captiontitle]="img.email" 
+            [captiontext]="img.captiontext"></caption-component>
+        </div>
+    </div>
+</div>
