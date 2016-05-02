@@ -2,10 +2,10 @@
     <div *ngFor="lev img of images; let i = index" class="slider">
         <div *ngIf="isActiveIndex(i)">
             <image-component [url]="img.url" 
-            [alttext]="img.alttext">
+            [alttext]="img.title">
             </image-component>
-            <caption-component [captiontitle]="img.email" 
-            [captiontext]="img.captiontext"></caption-component>
+            <caption-component [captiontitle]="img.title" 
+            [captiontext]="img.detail"></caption-component>
         </div>
     </div>
 </div>
