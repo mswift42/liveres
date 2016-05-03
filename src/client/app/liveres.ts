@@ -15,16 +15,18 @@ import {EmploymentList} from './employment-list/employment-list';
 import {SkillsList} from './skills-list/skills-list';
 import {LanguageList} from './language-list/language-list';
 import {AwardList} from './award-list/award-list';
+import {SliderComponent} from './slider-component/slider-component';
+import {SliderService} from './slider-service/slider-service';
 
 @Component({
   selector: 'liveres-app',
-  providers: [ROUTER_PROVIDERS, SidenavService, ResService],
+  providers: [ROUTER_PROVIDERS, SidenavService, ResService, SliderService],
   templateUrl: 'app/liveres.html',
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
                  MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent,
                  AboutMe, ProjectsComponent, EducationsComponent,
                  EmploymentList, SkillsList, LanguageList,
-                 AwardList],
+                 AwardList, SliderComponent],
                  styleUrls: ['app/liveres.css'],
   pipes: []
 })

@@ -1,11 +1,10 @@
 <div class="slidercontainer">
-    <div *ngFor="lev img of images; let i = index" class="slider">
-        <div *ngIf="isActiveIndex(i)">
-            <image-component [url]="img.url" 
-            [alttext]="img.title">
+    <h3>Project show</h3>
+    <div *ngFor="let img of images; let i = index" class="slider">
+        <div *ngIf="index != 1">
+            <image-component [url]="img.url" [alttext]="img.title">
             </image-component>
-            <caption-component [captiontitle]="img.title" 
-            [captiontext]="img.detail"></caption-component>
+            <caption-component [captiontitle]="img.title" [captiontext]="img.detail"></caption-component>
         </div>
     </div>
 </div>

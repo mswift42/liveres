@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 
 
@@ -11,8 +11,8 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
   pipes: []
 })
 export class ImageComponent {
-  url: String;
-  alttext: String;
+  @Input() url: String;
+  @Input() alttext: String;
 
   constructor() {}
 
