@@ -23,7 +23,7 @@ import {SliderService} from './slider-service/slider-service';
   providers: [ROUTER_PROVIDERS, SidenavService, ResService, SliderService],
   templateUrl: 'app/liveres.html',
     directives: [ROUTER_DIRECTIVES, MdToolbar, MD_SIDENAV_DIRECTIVES,
-                 MD_LIST_DIRECTIVES, MdButton, ResumeCat,ContactComponent,
+                 MD_LIST_DIRECTIVES, MdButton, ResumeCat, ContactComponent,
                  AboutMe, ProjectsComponent, EducationsComponent,
                  EmploymentList, SkillsList, LanguageList,
                  AwardList, SliderComponent],
@@ -36,7 +36,7 @@ export class LiveresApp {
   cats: SidenavCategory[];
   sampleres: Resume;
   contact: Contact;
-  constructor(sidenavservice: SidenavService,resservice: ResService) {
+  constructor(sidenavservice: SidenavService, resservice: ResService) {
     this.cats = sidenavservice.getCategories();
     this.contact = resservice.getSampleResume().contact;
   }
