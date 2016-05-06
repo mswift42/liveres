@@ -1,65 +1,44 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Liveres</title>
-  <base href="/" >
-  {{content-for 'head'}}
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <head>
+    <meta charset="utf-8">
+    <title>Liveres</title>
+    <base href="/" >
+    {{content-for 'head'}}
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Service worker support is disabled by default.
-       Install the worker script and uncomment to enable.
-       Only enable service workers in production.
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/worker.js').catch(function(err) {
-        console.log('Error installing service worker: ', err);
-      });
-    }
-  </script>
-  -->
-  <style>
-  body {
-    margin:0px;
-  }
-  </style>
-</head>
-<body>
-<liveres-app>Loading...</liveres-app>
+    <!-- Service worker support is disabled by default.
+    Install the worker script and uncomment to enable.
+    Only enable service workers in production.
+    <script type="text/javascript">
+     if ('serviceWorker' in navigator) {
+       navigator.serviceWorker.register('/worker.js').catch(function(err) {
+         console.log('Error installing service worker: ', err);
+       });
+     }
+    </script>
+    -->
+    <style>
+     body {
+       margin:0px;
+     }
+    </style>
+  </head>
+  <body>
+    <liveres-app>Loading...</liveres-app>
 
-<script src="vendor/es6-shim/es6-shim.js"></script>
-<script src="vendor/systemjs/dist/system-polyfills.js"></script>
-<script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
-<script src="vendor/systemjs/dist/system.src.js"></script>
-<script src="vendor/rxjs/bundles/Rx.js"></script>
+    <script src="vendor/es6-shim/es6-shim.js"></script>
+    <script src="vendor/reflect-metadata/Reflect.js"></script>
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/zone.js/dist.zone.js"></script>
 
-<script src="vendor/angular2/bundles/angular2.dev.js"></script>
-<script src="vendor/angular2/bundles/http.dev.js"></script>
-<script src="vendor/angular2/bundles/router.dev.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<script>
-  System.config({
-    map: {
-      '@angular2-material': 'vendor/@angular2-material'
-    },
-    packages: {
-      app: {
-        format: 'register',
-        defaultExtension: 'js'
-      },
-      '@angular2-material': {
-        map: {
-          './card': './card/card.js',
-          './sidenav': './sidenav/sidenav.js',
-          './toolbar': './toolbar/toolbar.js',
-          './button': './button/button.js',
-          './list': './list/list.js'
-        }
-      }
-    }
-  });
-  System.import('app.js').then(null, console.error.bind(console));
-</script>
-</body>
+    <script>
+     System.import('system-config.js').then(function () {
+       System.import('main');
+     }).catch(console.error.bind(console));
+    </script>
+  </body>
 </html>
